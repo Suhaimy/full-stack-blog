@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import ImageComponent from "../components/ImageComponent";
 import PostMenuActions from "../components/PostMenuActions";
 import Search from "../components/Search";
+import Comments from "../components/Comments";
 
 const SinglePostPage = () => {
   return (
@@ -170,6 +171,8 @@ const SinglePostPage = () => {
           <Search />
         </div>
       </div>
+      {/* comments */}
+      <Comments />
     </div>
   );
 };
