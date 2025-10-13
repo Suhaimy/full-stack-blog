@@ -1,7 +1,7 @@
 import { Image, buildSrc } from "@imagekit/react";
 import { useState, useRef, useCallback } from "react";
 
-const ImageComponent = ({ src, className, alt }) => {
+const ImageComponent = ({ src, className, alt, w, h }) => {
   const [showPlaceholder, setShowPlaceholder] = useState(true);
 
   const hidePlaceholder = () => setShowPlaceholder(false);
@@ -20,6 +20,14 @@ const ImageComponent = ({ src, className, alt }) => {
       src={src}
       className={className}
       alt={alt}
+      width={w}
+      height={h}
+      transformation={[
+        {
+          width: w,
+          height: h,
+        },
+      ]}
       loading="eager" // To ensure the image starts loading immediately
       ref={imgRef}
       style={
