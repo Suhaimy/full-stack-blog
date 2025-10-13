@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="w-full h-16 md:h-20 flex items-center justify-between">
       {/* LOGO */}
       <Link to="/" className="flex items-center gap-4 text-2xl font-bold">
-        <ImageComponent src="/logo.png" width={32} height={32} alt="logo" />
+        <ImageComponent src="/logo.png" className="w-8 h-8" alt="logo" />
         <span>lamalog</span>
       </Link>
       {/* MOBILE MENU */}

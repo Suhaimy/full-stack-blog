@@ -1,7 +1,7 @@
 import { Image, buildSrc } from "@imagekit/react";
 import { useState, useRef, useCallback } from "react";
 
-const ImageComponent = ({ src, width, height, alt }) => {
+const ImageComponent = ({ src, className, alt }) => {
   const [showPlaceholder, setShowPlaceholder] = useState(true);
 
   const hidePlaceholder = () => setShowPlaceholder(false);
@@ -18,8 +18,7 @@ const ImageComponent = ({ src, width, height, alt }) => {
     <Image
       urlEndpoint={import.meta.env.VITE_IK_URL_ENDPOINT}
       src={src}
-      width={width}
-      height={height}
+      className={className}
       alt={alt}
       loading="eager" // To ensure the image starts loading immediately
       ref={imgRef}
